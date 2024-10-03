@@ -29,7 +29,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/ailisp/strict-paredit-vscode"
+        "url": "https://github.com/tohoyn/strict-paredit-guile-vscode"
     },
     "activationEvents": [
         "onLanguage:commonlisp",
