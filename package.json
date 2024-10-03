@@ -1,10 +1,10 @@
 {
-    "name": "strict-paredit",
-    "displayName": "Strict Paredit",
+    "name": "strict-paredit-guile-vscode",
+    "displayName": "Strict Paredit with Guile Support",
     "description": "Classic strict paredit: structural editing and navigation",
-    "version": "0.3.2",
+    "version": "1.0.0",
     "icon": "assets/paredit.png",
-    "publisher": "ailisp",
+    "publisher": "tohoyn2",
     "license": "MIT",
     "engines": {
         "vscode": "^1.20.0"

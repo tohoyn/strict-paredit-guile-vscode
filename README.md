@@ -1,6 +1,6 @@
 # Strict Paredit
 
-Classic, Emacs Paredit-like Structural editing and navigation for Common Lisp, Clojure and Scheme.
+Classic, Emacs Paredit-like Structural editing and navigation for Common Lisp, Clojure, Scheme and Guile.
 
 <p align="center">
 <a href="https://marketplace.visualstudio.com/items?itemName=ailisp.strict-paredit"><img width="128px" height="128px" src="https://github.com/ailisp/strict-paredit-vscode/raw/master/assets/paredit.png" title="Paredit icon"></img></a>
@@ -13,6 +13,9 @@ This is a [Paredit](http://mumble.net/~campbell/emacs/paredit.el) extension for 
 
 Note: You can choose to disable all default key bindings by configuring `paredit.defaultKeyMap` to `none`. (Then you probably also want to register your own shortcuts for the commands you often use. see `ets/keys.json` for example). By default the strict mode map is used. Below commands work in both strict mode and original mode.
 If you are new to Paredit, below **shortcut in bond text** is a small but very frequently used set of commands that helps in 95% of the time. I hightly recommend you memorize them to be efficient.
+
+If you don't want to use the strict editing mode configure
+`paredit_theme_d.defaultKeyMap` to `original` or `none`.
 
 ### Navigation
 
