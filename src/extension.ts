@@ -2,6 +2,7 @@
 import { StatusBar } from './status_bar';
 import * as utils from './utils';
 import { commands, window, ExtensionContext, workspace, ConfigurationChangeEvent, } from 'vscode';
+import * as vscode from 'vscode';
 
 let paredit = require('paredit.js');
 
@@ -57,7 +58,18 @@ function indent({ textEditor, selection }) {
 
     utils
         .edit(textEditor, utils.commands(res))
-        .then((applied?) => utils.undoStop(textEditor));
+        .then((applied?) => utils.undoStop(textEditor))
+        .then((x) => vscode.window.showInformationMessage("Indentation completed", "Close"));
+}
+
+function indent2({ textEditor, selection }) {
+  let src = textEditor.document.getText(),
+      ast = paredit.parse(src),
+      res = paredit.editor.indentRange(ast, src, selection.start, selection.end);
+
+  utils
+      .edit(textEditor, utils.commands(res))
+      .then((applied?) => utils.undoStop(textEditor));
 }
 
 function leftChar({ textEditor, selection }) {
@@ -155,6 +167,7 @@ const pareditCommands: [string, Function][] = [
     ['paredit.wrapAroundSquare', edit(wrapAround, { opening: '[', closing: ']' })],
     ['paredit.wrapAroundCurly', edit(wrapAround, { opening: '{', closing: '}' })],
     ['paredit.indentRange', indent],
+    ['paredit.indentRangeNoMessage', indent2],
     ['paredit.transpose', edit(paredit.editor.transpose)]];
 
 function wrapPareditCommand(fn) {
