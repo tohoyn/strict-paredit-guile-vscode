@@ -2,7 +2,7 @@
   "name": "strict-paredit-guile-vscode",
   "displayName": "Strict Paredit with Guile Support",
   "description": "Classic strict paredit: structural editing and navigation",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "icon": "assets/paredit.png",
   "publisher": "tohoyn2",
   "license": "MIT",
@@ -516,13 +516,17 @@
     "postinstall": "node ./node_modules/vscode/bin/install"
   },
   "dependencies": {
-    "clipboardy": "^1.2.3",
-    "paredit.js": "^0.3.4"
+    "ace.improved": "^0.2.1",
+    "chai": "^5.1.2",
+    "chai-subset": "^1.6.0",
+    "concat": "^1.0.3",
+    "paredit.js": "github:tohoyn/paredit.js#th-devel",
+    "uglify-js": "^3.19.3"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.11.5",
-    "mocha": "^5.2.0",
+    "mocha": "^11.7.6",
     "typescript": "^3.1.1",
     "vscode": "^1.1.18"
   }
