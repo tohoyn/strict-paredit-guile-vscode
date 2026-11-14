@@ -2,7 +2,7 @@
   "name": "strict-paredit-guile-vscode",
   "displayName": "Strict Paredit with Guile Support",
   "description": "Classic strict paredit: structural editing and navigation",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "icon": "assets/paredit.png",
   "publisher": "tohoyn2",
   "license": "MIT",
@@ -468,7 +468,7 @@
       },
       {
         "command": "paredit.indentRange",
-        "key": "ctrl+alt+i",
+        "key": "ctrl+i",
         "when": "editorLangId =~ /commonlisp|clojure|scheme|lisp|guile/ && paredit:keyMap =~ /original|strict/ && editorTextFocus && !editorReadOnly"
       },
       {
