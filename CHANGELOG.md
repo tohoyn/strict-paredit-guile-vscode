@@ -1,3 +1,9 @@
+## 1.0.5
+- Updated the icon.
+
+## 1.0.4
+- Changed ctrl+alt+i to ctrl+i for indenting ranges.
+
 ## 1.0.3
 - Fixed the dependency to paredit.js.
 
